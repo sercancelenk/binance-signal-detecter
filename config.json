@@ -1,0 +1,12 @@
+{
+    "telegram_token": "",
+    "chat_id": "",
+    "price_change_threshold": 5.0,
+    "volume_change_threshold": 100.0,
+    "batch_interval": 300,
+    "binance_api_key": "",
+    "binance_api_secret": "",
+    "reddit_user_agent": "CryptoPumpScreener",
+    "reddit_client_id": "",
+    "reddit_secret": ""
+}

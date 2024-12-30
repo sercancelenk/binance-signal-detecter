@@ -1,0 +1,8 @@
+flask
+pandas
+requests
+pytrends
+beautifulsoup4
+praw 
+cachetools
+TA-Lib
