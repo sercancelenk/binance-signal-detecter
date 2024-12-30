@@ -41,10 +41,10 @@ config = load_config()
 BINANCE_FUTURES_INFO_URL = "https://fapi.binance.com/fapi/v1/exchangeInfo"
 BINANCE_TICKER_URL = "https://fapi.binance.com/fapi/v1/ticker/24hr"
 BINANCE_HISTORICAL_KLINES_URL = "https://fapi.binance.com/fapi/v1/klines"
-BINANCE_API_KEY = config["BINANCE_API_KEY"]
-PRICE_CHANGE_THRESHOLD = config["PRICE_CHANGE_THRESHOLD"]
-VOLUME_CHANGE_THRESHOLD = config["VOLUME_CHANGE_THRESHOLD"]
-BATCH_INTERVAL = config["BATCH_INTERVAL"]
+BINANCE_API_KEY = config["binance_api_key"]
+PRICE_CHANGE_THRESHOLD = config["price_change_threshold"]
+VOLUME_CHANGE_THRESHOLD = config["volume_change_threshold"]
+BATCH_INTERVAL = config["batch_interval"]
 
 # Global Variables
 detected_signals = []  # Store all detected signals for API use
