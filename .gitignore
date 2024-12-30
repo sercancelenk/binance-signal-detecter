@@ -1,0 +1,118 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Flask-specific
+instance/
+*.log
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+venv.bak/
+.env.bak/
+
+# Development tools
+.vscode/
+.idea/
+*.swp
+*~
+
+# Testing and coverage
+.coverage
+.tox/
+.nox/
+.cache/
+pytest_cache/
+htmlcov/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Distribution / Packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+# Usually these files are written by a python script from a template
+# before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Sphinx documentation
+docs/_build/
+
+# Pyenv
+.python-version
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# dotenv
+.env
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# SQLite database files
+*.sqlite3
+*.db
+
+# MacOS-specific files
+.DS_Store
+
+# Logs
+logs/
+*.log
+*.out
+*.err
+
+# Backup files
+*.bak
+*.orig
+*.tmp
+*.swp
+*.swo
+
+# Editor and IDE settings
+*.sublime-project
+*.sublime-workspace

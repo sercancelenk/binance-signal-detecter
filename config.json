@@ -1,12 +1,12 @@
 {
-    "telegram_token": "",
-    "chat_id": "",
+    "telegram_token": "7795220504:AAF11NuRbmcAUCSwNSpYAbM0jdYkulyxot0",
+    "chat_id": "1674344057",
     "price_change_threshold": 5.0,
     "volume_change_threshold": 100.0,
     "batch_interval": 300,
-    "binance_api_key": "",
-    "binance_api_secret": "",
+    "binance_api_key": "J7E1ErtUjvpo7jonbsLfVS0c8h4kavyDHhPgmWU8vrrqV433MYir1udJJjzKY7pk",
+    "binance_api_secret": "g2M727D3V5PVmB9cjookEBBJRDGkGxYZVuYagOlR9J351lTINuLtuUagTcitUbDh",
     "reddit_user_agent": "CryptoPumpScreener",
-    "reddit_client_id": "",
-    "reddit_secret": ""
+    "reddit_client_id": "jCSzvSkqqhOJl-rDA9rFWA",
+    "reddit_secret": "rH5vihV_17G1z8NMkOwjcKG1bp0bag"
 }

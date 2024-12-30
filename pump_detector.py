@@ -8,12 +8,27 @@ from telegram_bot import send_telegram_message
 import talib
 import numpy as np  # Import NumPy
 import threading
+import os
 
 pd.set_option('future.no_silent_downcasting', True)
 
-# Load Config
-with open("config.json", "r") as config_file:
-    config = json.load(config_file)
+# Load Config    
+def load_config():
+    try:
+        # Try to load the JSON config file
+        with open("config.json", "r") as config_file:
+            return json.load(config_file)
+    except FileNotFoundError:
+        return {
+            "BINANCE_API_KEY": os.getenv("binance_api_key"),
+            "PRICE_CHANGE_THRESHOLD": float(os.getenv("price_change_threshold", 5.0)),
+            "VOLUME_CHANGE_THRESHOLD": float(os.getenv("volume_change_threshold", 1000)),
+            "BATCH_INTERVAL": int(os.getenv("batch_interval", 300)),
+            "PRICE_CHANGE_THRESHOLD": float(os.getenv("price_change_threshold", 5.0)),
+            "VOLUME_CHANGE_THRESHOLD": float(os.getenv("volume_change_threshold", 100.0))
+        }
+
+config = load_config()
 
 # Constants
 BINANCE_FUTURES_INFO_URL = "https://fapi.binance.com/fapi/v1/exchangeInfo"

@@ -1,9 +1,21 @@
 import requests
 import json
+import os
 
-# Load Config
-with open("config.json", "r") as config_file:
-    config = json.load(config_file)
+
+def load_config():
+    try:
+        # Try to load the JSON config file
+        with open("config.json", "r") as config_file:
+            print("Configuration loaded from JSON file.")
+            return json.load(config_file)
+    except FileNotFoundError:
+        return {
+            "TELEGRAM_TOKEN": os.getenv("telegram_token"),
+            "CHAT_ID": os.getenv("chat_id")
+        }
+
+config = load_config()        
 
 TELEGRAM_TOKEN = config["telegram_token"]
 CHAT_ID = config["chat_id"]
