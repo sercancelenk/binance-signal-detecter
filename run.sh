@@ -3,24 +3,21 @@
 # Define log and PID files
 LOG_FILE="app.log"
 PID_FILE="app.pid"
+APP_NAME="app.py"
 
 # Function to check if the app is already running
 is_running() {
-    if [ -f "$PID_FILE" ]; then
-        PID=$(cat "$PID_FILE")
-        if ps -p "$PID" > /dev/null 2>&1; then
-            return 0
-        else
-            echo "Stale PID file found. Cleaning up..."
-            rm -f "$PID_FILE"
-        fi
+    # Look for any running process for app.py (exclude this script and grep)
+    RUNNING_PID=$(pgrep -f "$APP_NAME" | grep -v $$ | grep -v grep | head -n 1)
+    if [ -n "$RUNNING_PID" ]; then
+        echo "App is already running with PID $RUNNING_PID."
+        return 0
     fi
     return 1
 }
 
 # Check if the app is already running
 if is_running; then
-    echo "The app is already running with PID $(cat "$PID_FILE")."
     exit 1
 fi
 
