@@ -221,6 +221,9 @@ def calculate_confidence_boost(volume_spike, price_change_percent):
     return min(volume_boost + price_boost, 0.2)
 
 def detect_pumps():
+    message = "🚀 Signal Detection started.."
+    send_telegram_message(message)
+    
     """
     Detect potential pump signals for USDT trading pairs.
 
