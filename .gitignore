@@ -116,3 +116,6 @@ logs/
 # Editor and IDE settings
 *.sublime-project
 *.sublime-workspace
+
+svenv/
+svenv
